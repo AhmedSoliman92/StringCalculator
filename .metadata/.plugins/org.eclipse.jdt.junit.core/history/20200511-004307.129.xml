@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="stringCalculater" project="stringCalculater" tests="41" started="41" failures="0" errors="0" ignored="0">
+  <testsuite name="calculator.StringCalculatorTest" time="0.045">
+    <testcase name="isMinusOneNegativeTest" classname="calculator.StringCalculatorTest" time="0.008"/>
+    <testcase name="determineDelimiterAndFindLineWithNumbersWithCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="isItInValidRangeWithOneThousandToOneTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="determineDelimiterWithRepeatedCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.004"/>
+    <testcase name="isNumberNotEmptyTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addDelimitersTwoCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addDelimitersTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="hasNegativeTokensTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateSumTest" classname="calculator.StringCalculatorTest" time="0.021"/>
+    <testcase name="calculateOneThousandOnePlusTwo" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="hasNotNegativeTokensTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="findLineWithNumbersAndDelimitersTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="hasDelimiterTest" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="calculateEmptyResult" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addSingleInvalidTokenTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addSingleNegativeTokenTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="throwExceptionIfNegativeTokensExistTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="findLineWithNumbersAndCustomDelimitersTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="determineDelimiterAndFindLineWithNumbersWithRepeatedCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateTwoNumbersWithCustomDelimiter" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="calculateSingleNegativeNumber" classname="calculator.StringCalculatorTest" time="0.003"/>
+    <testcase name="hasNotDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addDelimitersWithoutCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addSingleTokenTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="findLineWithNumbersAndRepeatedDelimitersTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="isNumberEmptyTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="determineDelimiterAndFindLineWithNumbersTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="isItInValidRangeTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateTwoNegativeNumbersException" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="splitNumberByDelimiter" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="calculateTwoNumbers" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="determineDelimiterWithCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateNegativeSumTestException" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="findLineWithNumbersAndTwoDelimitersTest" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="calculateSingleNumber" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="determineDelimiterAndFindLineWithNumbersWithTwoCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="throwExceptionIfNegativeTokensExistTestException" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="calculateTwoNumbersWithNewline" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="isOneNegativeTest" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="calculateThreeNumbersWithTwoCustomDelimiter" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="determineDelimiterWithTwoCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.001"/>
+  </testsuite>
+</testrun>

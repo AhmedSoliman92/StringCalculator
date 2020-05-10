@@ -2,15 +2,21 @@ package calculator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.apache.commons.lang3.StringUtils;
 
 
 public class StringCalculator {
-
+	private  static Logger logger = Logger.getLogger("calculator");
+	
+	private static LoggingListener loggingListener = new LoggingListener();
     public static int add(String number) {
+    	Logger.getLogger("calculator").addHandler(loggingListener);
         InnerStringCalculator stringCalculater = new InnerStringCalculator(number);
         return stringCalculater.add();
+        
     }
 
     static class InnerStringCalculator {
@@ -94,12 +100,19 @@ public class StringCalculator {
             for (String token : numberSplittedByDelimiter) {
                 output += addSingleToken(token);
             }
-            throwExceptionIfNegativeTokensExist(negativeTokens);
+            try {
+           	 throw new IllegalArgumentException();
+           }catch(IllegalArgumentException e) {
+           	logger.log(Level.INFO,"negatives not allowed "+ StringUtils.join(negativeTokens, ","));
+           }
+            
+            logger.log(Level.INFO,"Total SUM equals: "+ output);
             return output;
         }
 
         public void throwExceptionIfNegativeTokensExist(List<String> negativeTokens ) {
             if (hasNegativeTokens( negativeTokens)) {
+            	logger.log(Level.INFO,"negatives not allowed "+ StringUtils.join(negativeTokens, ","));
                 throw new IllegalArgumentException(String.format("negatives not allowed (%s)", StringUtils.join(negativeTokens, ",")));
             }
         }

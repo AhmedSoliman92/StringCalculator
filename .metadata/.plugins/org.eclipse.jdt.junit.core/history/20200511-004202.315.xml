@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="stringCalculater" project="stringCalculater" tests="41" started="41" failures="2" errors="0" ignored="0">
+  <testsuite name="calculator.StringCalculatorTest" time="0.056">
+    <testcase name="isMinusOneNegativeTest" classname="calculator.StringCalculatorTest" time="0.011"/>
+    <testcase name="determineDelimiterAndFindLineWithNumbersWithCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="isItInValidRangeWithOneThousandToOneTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="determineDelimiterWithRepeatedCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.005"/>
+    <testcase name="isNumberNotEmptyTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addDelimitersTwoCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addDelimitersTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="hasNegativeTokensTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateSumTest" classname="calculator.StringCalculatorTest" time="0.02"/>
+    <testcase name="calculateOneThousandOnePlusTwo" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="hasNotNegativeTokensTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="findLineWithNumbersAndDelimitersTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="hasDelimiterTest" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="calculateEmptyResult" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addSingleInvalidTokenTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addSingleNegativeTokenTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="throwExceptionIfNegativeTokensExistTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="findLineWithNumbersAndCustomDelimitersTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="determineDelimiterAndFindLineWithNumbersWithRepeatedCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateTwoNumbersWithCustomDelimiter" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="calculateSingleNegativeNumber" classname="calculator.StringCalculatorTest" time="0.003"/>
+    <testcase name="hasNotDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addDelimitersWithoutCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="addSingleTokenTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="findLineWithNumbersAndRepeatedDelimitersTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="isNumberEmptyTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="determineDelimiterAndFindLineWithNumbersTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="isItInValidRangeTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateTwoNegativeNumbersException" classname="calculator.StringCalculatorTest" time="0.005">
+      <failure>java.lang.AssertionError&#13;
+	at org.junit.Assert.fail(Assert.java:87)&#13;
+	at org.junit.Assert.fail(Assert.java:96)&#13;
+	at calculator.StringCalculatorTest.calculateTwoNegativeNumbersException(StringCalculatorTest.java:66)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)&#13;
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)&#13;
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="splitNumberByDelimiter" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateTwoNumbers" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="determineDelimiterWithCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateNegativeSumTestException" classname="calculator.StringCalculatorTest" time="0.001">
+      <failure>java.lang.AssertionError: expected:&lt;3&gt; but was:&lt;2&gt;&#13;
+	at org.junit.Assert.fail(Assert.java:89)&#13;
+	at org.junit.Assert.failNotEquals(Assert.java:835)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:647)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:633)&#13;
+	at calculator.StringCalculatorTest.calculateNegativeSumTestException(StringCalculatorTest.java:158)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)&#13;
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)&#13;
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)&#13;
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="findLineWithNumbersAndTwoDelimitersTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateSingleNumber" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="determineDelimiterAndFindLineWithNumbersWithTwoCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="throwExceptionIfNegativeTokensExistTestException" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateTwoNumbersWithNewline" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="isOneNegativeTest" classname="calculator.StringCalculatorTest" time="0.0"/>
+    <testcase name="calculateThreeNumbersWithTwoCustomDelimiter" classname="calculator.StringCalculatorTest" time="0.001"/>
+    <testcase name="determineDelimiterWithTwoCustomDelimiterTest" classname="calculator.StringCalculatorTest" time="0.004"/>
+  </testsuite>
+</testrun>

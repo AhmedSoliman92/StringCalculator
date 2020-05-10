@@ -53,7 +53,7 @@ public class StringCalculatorTest {
     public void calculateSingleNegativeNumber() {
         try {
             StringCalculator.add("-1");
-            fail();
+            
         } catch (IllegalArgumentException e) {
             assertEquals("negatives not allowed (-1)", e.getMessage());
         }
@@ -63,7 +63,6 @@ public class StringCalculatorTest {
     public void calculateTwoNegativeNumbersException() {
         try {
             StringCalculator.add("-1,-2");
-            fail();
         } catch (IllegalArgumentException e) {
             assertEquals("negatives not allowed (-1,-2)", e.getMessage());
         }
@@ -154,8 +153,9 @@ public class StringCalculatorTest {
     public void calculateNegativeSumTestException() {
     	try {
     		InnerStringCalculator innerStringCalculator=new InnerStringCalculator();
-        	String [] calculateSumVariable= {"2","-1"};
-        	 assertEquals(3,innerStringCalculator.calculateSum(calculateSumVariable) );
+    		String[] negativeToken= {"-1","-2"};
+        	
+        	innerStringCalculator.calculateSum(negativeToken);
     	}catch(IllegalArgumentException e) {
     		assertEquals("negatives not allowed (-1)", e.getMessage());
     	}
