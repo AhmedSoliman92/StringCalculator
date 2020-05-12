@@ -23,4 +23,8 @@ public class LoggingListener extends Handler {
 	public void publish(LogRecord arg0) {
 		this.stringBuilder.append(arg0.getMessage());
 	}
+	 
+	 public String getData() {
+		 return this.stringBuilder.toString();
+	 }
 }

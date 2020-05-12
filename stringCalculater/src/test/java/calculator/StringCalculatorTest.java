@@ -3,11 +3,11 @@ package calculator;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -17,6 +17,7 @@ public class StringCalculatorTest {
     @Test
     public void calculateEmptyResult() {
         Assert.assertEquals(0, StringCalculator.add(""));
+       
     }
 
     @Test
@@ -93,52 +94,52 @@ public class StringCalculatorTest {
     	assertFalse(innerStringCalculator.isItNegative(1));
     }
     @Test
-    public void addSingleTokenTest() {
+    public void addSingleNumberTest() {
     	InnerStringCalculator innerStringCalculator=new InnerStringCalculator();
-    	assertEquals(1,innerStringCalculator.addSingleToken("1"));
+    	assertEquals(1,innerStringCalculator.addSingleNumber("1"));
     }
     @Test
-    public void addSingleNegativeTokenTest() {
+    public void addSingleNegativeNumbersTest() {
     	InnerStringCalculator innerStringCalculator=new InnerStringCalculator();
-    	assertEquals(0,innerStringCalculator.addSingleToken("-1"));
+    	assertEquals(0,innerStringCalculator.addSingleNumber("-1"));
     }
     @Test
-    public void addSingleInvalidTokenTest() {
+    public void addSingleInvalidNumberTest() {
     	InnerStringCalculator innerStringCalculator=new InnerStringCalculator();
-    	assertEquals(0,innerStringCalculator.addSingleToken("1001"));
-    }
-    
-    @Test
-    public void hasNotNegativeTokensTest() {
-    	InnerStringCalculator innerStringCalculator=new InnerStringCalculator();
-    	List<String> negativeToken=new ArrayList<String>();
-    	assertFalse(innerStringCalculator.hasNegativeTokens(negativeToken));
+    	assertEquals(0,innerStringCalculator.addSingleNumber("1001"));
     }
     
     @Test
-    public void hasNegativeTokensTest() {
+    public void hasNotNegativeNumbersTest() {
     	InnerStringCalculator innerStringCalculator=new InnerStringCalculator();
-    	List<String> negativeToken=new ArrayList<String>();
-    	negativeToken.add("-1");
-    	assertTrue(innerStringCalculator.hasNegativeTokens(negativeToken));
+    	List<String> negativeNumbers=new ArrayList<String>();
+    	assertFalse(innerStringCalculator.hasNegativeNumbers(negativeNumbers));
+    }
+    
+    @Test
+    public void hasNegativeNumbersTest() {
+    	InnerStringCalculator innerStringCalculator=new InnerStringCalculator();
+    	List<String> negativeNumbers=new ArrayList<String>();
+    	negativeNumbers.add("-1");
+    	assertTrue(innerStringCalculator.hasNegativeNumbers(negativeNumbers));
     }
     @Test
-    public void throwExceptionIfNegativeTokensExistTestException() {
+    public void throwExceptionIfNegativeNumbersExistTestException() {
     	try {
     	InnerStringCalculator innerStringCalculator=new InnerStringCalculator();
-    	List<String> negativeToken=new ArrayList<String>();
-    	negativeToken.add("-1");
-    	innerStringCalculator.throwExceptionIfNegativeTokensExist(negativeToken);
+    	List<String> negativeNumbers=new ArrayList<String>();
+    	negativeNumbers.add("-1");
+    	innerStringCalculator.throwExceptionIfNegativeNumbersExist(negativeNumbers);
         } catch (IllegalArgumentException e) {
             assertEquals("negatives not allowed (-1)", e.getMessage());
         }
     }
     @Test
-    public void throwExceptionIfNegativeTokensExistTest() {
+    public void throwExceptionIfNegativeNumbersExistTest() {
     	try {
     	InnerStringCalculator innerStringCalculator=new InnerStringCalculator();
-    	List<String> negativeToken=new ArrayList<String>();
-    	innerStringCalculator.throwExceptionIfNegativeTokensExist(negativeToken);
+    	List<String> negativeNumbers=new ArrayList<String>();
+    	innerStringCalculator.throwExceptionIfNegativeNumbersExist(negativeNumbers);
         } catch (IllegalArgumentException e) {
             assertEquals("", e.getMessage());
         }
@@ -153,9 +154,9 @@ public class StringCalculatorTest {
     public void calculateNegativeSumTestException() {
     	try {
     		InnerStringCalculator innerStringCalculator=new InnerStringCalculator();
-    		String[] negativeToken= {"-1","-2"};
+    		String[] negativeNumbers= {"-1","-2"};
         	
-        	innerStringCalculator.calculateSum(negativeToken);
+        	innerStringCalculator.calculateSum(negativeNumbers);
     	}catch(IllegalArgumentException e) {
     		assertEquals("negatives not allowed (-1)", e.getMessage());
     	}
@@ -263,4 +264,15 @@ public class StringCalculatorTest {
     	InnerStringCalculator innerStringCalculator=new InnerStringCalculator();
     	assertTrue(innerStringCalculator.isNumberEmpty(""));
     }
-}
+    @Test
+    public void calculatePlainText() {
+    	try { StringCalculator.add("text");
+    	} catch(NumberFormatException nfe) {
+    		assertEquals("For input string: \"text\"",nfe.getMessage());
+    	}
+    }
+    @Test
+    public void addFortyIntegerNumbersTest() {
+    	assertEquals(40,StringCalculator.add("1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1"));
+    	    }
+   }

@@ -12,7 +12,8 @@ public class StringCalculator {
 	private  static Logger logger = Logger.getLogger("calculator");
 	
 	private static LoggingListener loggingListener = new LoggingListener();
-    public static int add(String number) {
+
+	public static int add(String number) {
     	Logger.getLogger("calculator").addHandler(loggingListener);
         InnerStringCalculator stringCalculater = new InnerStringCalculator(number);
         return stringCalculater.add();
@@ -24,7 +25,7 @@ public class StringCalculator {
 
         private String delimiter = "[,\n]";
         private String delimitersWithNumbers;
-        private List<String> negativeTokens = new ArrayList<String>();
+        private List<String> negativeNumbers = new ArrayList<String>();
         public InnerStringCalculator(String number) {
             this.number = "";
 			this.number = number;
@@ -37,6 +38,7 @@ public class StringCalculator {
 
 		public int add() {
             if (isNumberEmpty(number)) {
+            	logger.log(Level.INFO,"Total SUM equals: "+ 0);
                 return 0;
             }
             determineDelimiterAndFindLineWithNumbers( number);
@@ -98,33 +100,28 @@ public class StringCalculator {
         public int calculateSum(String[] numberSplittedByDelimiter) {
             int output = 0;
             for (String token : numberSplittedByDelimiter) {
-                output += addSingleToken(token);
+                output += addSingleNumber(token);
             }
-            try {
-           	 throw new IllegalArgumentException();
-           }catch(IllegalArgumentException e) {
-           	logger.log(Level.INFO,"negatives not allowed "+ StringUtils.join(negativeTokens, ","));
-           }
             
             logger.log(Level.INFO,"Total SUM equals: "+ output);
             return output;
         }
 
-        public void throwExceptionIfNegativeTokensExist(List<String> negativeTokens ) {
-            if (hasNegativeTokens( negativeTokens)) {
-            	logger.log(Level.INFO,"negatives not allowed "+ StringUtils.join(negativeTokens, ","));
-                throw new IllegalArgumentException(String.format("negatives not allowed (%s)", StringUtils.join(negativeTokens, ",")));
+        public void throwExceptionIfNegativeNumbersExist(List<String> negativeNumbers ) {
+            if (hasNegativeNumbers( negativeNumbers)) {
+            	logger.log(Level.INFO,"negatives not allowed "+ StringUtils.join(negativeNumbers, ","));
+                throw new IllegalArgumentException(String.format("negatives not allowed (%s)", StringUtils.join(negativeNumbers, ",")));
             }
         }
 
-        public boolean hasNegativeTokens(List<String> negativeTokens) {
-            return negativeTokens.size() > 0;
+        public boolean hasNegativeNumbers(List<String> negativeNumbers) {
+            return negativeNumbers.size() > 0;
         }
 
-        public int addSingleToken(String token) {
-            Integer valueAsInteger = Integer.parseInt(token);
+        public int addSingleNumber(String numbers) {
+            Integer valueAsInteger = Integer.parseInt(numbers);
             if (isItNegative(valueAsInteger)) {
-                negativeTokens.add(token);
+                negativeNumbers.add(numbers);
             } else if (isItInValidRange(valueAsInteger)) {
                 return valueAsInteger;
             }
@@ -140,7 +137,15 @@ public class StringCalculator {
            
         }
         	
-        
+
 
     }
+
+    public Logger getCurrentLogger() {
+    	return logger;
+    }
+   
+   public LoggingListener getLoggingListener() {
+	   return loggingListener;
+   }
 }
